@@ -1,0 +1,106 @@
+#log{
+    /* border: 2px solid black; */
+    /* padding: 10px; */
+    border-radius: 50px;
+}
+
+.row {
+    margin-top: 5%;
+    /* margin-left: 2%; */
+    margin-right: 2%
+}
+
+.page {
+    margin-top: 0%
+}
+
+.btn {
+    border-radius: 25px;
+    width: 17%;
+    margin-top: 2%;
+    background-color:rgb(0, 0, 0);
+    margin-left:40%;
+    height: 45px;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.sign {
+    border-radius: 25px;
+    width: 25%;
+    margin: auto
+}
+
+.mleft{
+    margin-left:44%;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+
+form {
+    padding: 0;
+    /* margin-left: 5% */
+}
+
+.abc {
+    background-color: #FFFFFF;
+    padding: 2%;
+    margin: auto
+}
+
+.xyz {
+    background-color: #FFFFFF;
+    padding: 2%
+}
+
+.form-control {
+    width: 25%;
+    border-radius: 100px;
+    margin-left:36%;
+    height: 40px;
+}
+
+.fa {
+    color: white;
+    margin-top: 5%
+}
+
+.in {
+
+    margin-right: 60%
+}
+
+.in2 {
+    color: #FFFFFF;
+    margin-right: auto
+}
+
+.my {
+    background-color: #FFFFFF;
+    border: none
+}
+
+.custom-control {
+    margin-bottom: 2%
+}
+
+h2.account-text {
+    color: #fff !important;
+    font-weight: 200
+}
+
+.account-description {
+    color: #fff;
+    margin-bottom: 4%;
+    font-weight: 200
+}
+
+@media only screen and (max-width: 600px) {
+    row {
+        margin-top: 5%;
+        margin-left: 1%;
+        margin-right: 1%
+    }
+}

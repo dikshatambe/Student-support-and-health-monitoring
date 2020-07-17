@@ -1,0 +1,35 @@
+<br><br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<mat-label style= "font-size:24px;margin-left: 43%;">Welcome admin ...!</mat-label><br><br><br><br>
+
+<form class="example-form" [formGroup]="registerForm">
+
+  <mat-form-field class="example-full-width">
+
+    <mat-label>Group Name</mat-label>
+    <input matInput name="group_name" formControlName="group_name" maxlength="100" required>
+
+
+    <mat-error *ngIf="group_name.hasError('required')">
+      <strong>Groupname is required</strong>
+
+    </mat-error>
+
+  </mat-form-field>
+<br>
+ <mat-form-field class="example-full-width">
+    <mat-label> Group_Info</mat-label>
+    <input matInput name="group_info" placeholder="Group_Info" formControlName="group_info" maxlength="100" required>
+
+    <mat-error *ngIf="group_info.hasError('required')">
+      <strong>Group_Info is required</strong>
+    </mat-error>
+  </mat-form-field>
+  <br>
+
+  <br><br>
+  <button style="margin-left: 45%;background-color: black;color: white;" class="temp" name="save" mat-raised-button
+    [disabled]="!registerForm.valid" (click)="onSubmit()">Create</button>
+  <button routerLink="/" style="margin-left: 30px;background-color: black;color: white;" mat-raised-button
+     (click)="onSubmit()">Cancel</button>
+</form>

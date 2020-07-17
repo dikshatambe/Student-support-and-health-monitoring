@@ -1,0 +1,65 @@
+<div style="background-color: white;height: 90vh;">
+
+    <!--<app-userdetails></app-userdetails>-->
+    <div style="font-size: 30px; margin-left: 43%;padding-top: 3%;"> Help Desk</div>
+
+    <!--<p>Helpline number:020XXXXXXXX</p>-->
+
+    <br><br>
+    <form class="example-form" [formGroup]="registerForm">
+
+        <mat-form-field class="example-full-width2">
+
+            <mat-label>Roll No</mat-label>
+            <input matInput name="user_id" formControlName="user_id" maxlength="10" type="number" required>
+
+
+            <mat-error *ngIf="user_id.hasError('required')">
+                <strong>Roll no is required</strong>
+
+            </mat-error>
+
+        </mat-form-field>
+        <br>
+
+        <!--<mat-form-field class="example-full-width2">
+
+        <mat-label>Enter id</mat-label>
+        <input matInput name="id" formControlName="id" maxlength="5" required>
+
+
+        <mat-error *ngIf="id.hasError('required')">
+            <strong>ID is required</strong>
+
+        </mat-error>
+
+    </mat-form-field>-->
+        <br>
+
+        <!--<form>
+        <label for="query">Enter your query:</label>
+        <input type="text" id="query" name="query"><br><br>
+
+    </form>-->
+
+        <!-- <form> -->
+        <label for="query">Enter your query:</label><br>
+        <textarea id="query" name="query" rows="4" formControlName="query" cols="50">
+
+          </textarea>
+        <br><br><button style="margin-left:5%;" name="save" mat-raised-button color="primary"
+            (click)="onSubmit()">Submit
+            Query
+        </button>
+        <!--<button style="margin-left: 30px;" mat-raised-button color="primary" type="reset"
+                routerLink="/home">Cancel</button>-->
+        <button style="margin-left:30px;" name="reset" mat-raised-button color="primary" (click)="Cancel()">Cancel
+        </button>
+        <!-- </form> -->
+        <br>
+
+
+
+
+    </form>
+</div>

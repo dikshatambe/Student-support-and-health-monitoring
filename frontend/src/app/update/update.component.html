@@ -1,0 +1,51 @@
+<br><br>
+<mat-label style="font-size: 30px;margin-left: 43%;"> Update Record</mat-label><br><br><br>
+<div style="padding:10px">
+    <mat-form-field class="home-full-width">
+
+        <mat-label>User Id</mat-label>
+        <input matInput id="id" #message maxlength="256" placeholder="Ex. 1" required>
+
+    </mat-form-field>
+    <br><br><br><br>
+    <button style="margin-left: 44%" mat-raised-button class="btn" matSuffix aria-label="Clear" (click)="getById(message.value)"> Search
+    </button>
+    <button routerLink="/home" style="margin-left: 30px;" mat-raised-button class="btn"
+     (click)="onSubmit()">Reset</button>
+    <form>
+     <mat-grid-list cols="1" rowHeight="120px">
+        <mat-grid-tile *ngFor="let user of users" >
+            <mat-card class="home-card">
+                <table >
+                    <col width="150">
+                    <col width="150">
+                    <col width="150">
+                    <col width="150">
+                    <col width="150">
+                    <col width="150">
+                    <tr>
+                        <th>User Id</th>
+                        <th>First Name</th>
+                        <th> Last Name </th>
+                        <th> Email id </th>
+                        <th> Phone no </th>
+                        <th> Update</th>
+                    </tr>
+                     <tr >
+                        <td align="center"><input style="text-align: center;" disabled value="{{user.data['id']}}"> </td>
+                        <td align="center"><input style="text-align: center;" value="{{user.data['first_name']}}"> </td>
+                        <td align="center"><input style="text-align: center;" value="{{user.data['last_name']}}"> </td>
+                        <td align="center"><input style="text-align: center;" value="{{user.data['email']}}">  </td>
+                        <td align="center"><input style="text-align: center;" value="{{user.data['contact_number']}}"> </td>
+                        <td align="center"><button style="margin-left: 30px;"  (click)="openDialog(user,user.data['id'],user.data['first_name'],user.data['last_name'],user.data['email'],user.data['contact_number'])"  mat-raised-button color="primary" matSuffix aria-label="Clear"> Update
+                        </button>  </td>
+                     </tr>
+                  </table>
+
+
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+
+</form>
+</div>

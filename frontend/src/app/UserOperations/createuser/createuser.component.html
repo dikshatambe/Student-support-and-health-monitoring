@@ -1,0 +1,56 @@
+<!-- <p>create works!</p> -->
+
+<h1 style="margin-left: 50%;">Create</h1>
+<br>
+<form id="newuser" name="newuser" #createuser="ngForm" (ngSubmit)=post(createuser.value)>
+
+    <table>
+        <!-- <tr>
+
+            <td>
+                <input class="div" type="text" name="id" id="id" placeholder="id" ngModel><br>
+            </td>
+        </tr>-->
+        <br>
+        <tr>
+
+            <td>
+                <input class="div" type="text" name="first_name" id="first_name" placeholder="first_name" ngModel><br>
+            </td>
+        </tr>
+        <br>
+        <tr>
+
+            <td>
+                <input class="div" type="text" name="last_name" id="last_name" placeholder="last_name" ngModel><br>
+            </td>
+        </tr>
+        <br>
+        <tr>
+
+            <td>
+                <input class="div" type="text" name="email" id="email" placeholder="email" ngModel><br>
+            </td>
+        </tr>
+        <br>
+        <tr>
+
+            <td>
+                <input class="div" type="text" name="password" id="password" placeholder="password" ngModel><br>
+            </td>
+        </tr>
+        <br>
+        <tr>
+
+            <button class="button button4 div2" type="submit">Create User</button>
+
+            <button class="button button4 div1" type="reset"> Reset</button>
+
+
+        </tr>
+    </table>
+</form>
+
+<br>
+
+<h3 *ngIf="isAdded">{{Confirmation}}</h3>

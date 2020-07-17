@@ -1,0 +1,47 @@
+<br><br>
+<mat-label style="font-size: 30px;margin-left: 43%;"> Search Record</mat-label><br><br><br>
+<div style="padding:10px">
+    <mat-form-field class="home-full-width">
+
+        <mat-label>User Id</mat-label>
+        <input matInput id="id" #message maxlength="256" placeholder="Ex. 1" required>
+
+    </mat-form-field>
+    <br><br><br><br><br>
+    <button style="margin-left: 47%" mat-raised-button class="btn" matSuffix aria-label="Clear"
+        (click)="getById(message.value)"> Search
+    </button>
+    <mat-grid-list cols="1" rowHeight="450px">
+        <mat-grid-tile *ngFor="let user of users">
+            <mat-card class="home-card">
+                <table>
+                    <col width="150">
+                    <col width="150">
+                    <col width="150">
+                    <col width="150">
+                    <col width="150">
+
+                    <tr>
+                        <th>User Id</th>
+                        <th>First Name</th>
+                        <th> Last Name </th>
+                        <th> Email id </th>
+                        <th> Phone no </th>
+
+                    </tr>
+                    <tr>
+                        <td align="center">{{user.data["id"]}} </td>
+                        <td align="center">{{user.data["first_name"]}} </td>
+                        <td align="center">{{user.data["last_name"]}} </td>
+                        <td align="center">{{user.data["email"]}} </td>
+                        <td align="center">{{user.data["contact_number"]}} </td>
+                    </tr>
+                </table>
+
+
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+
+
+</div>

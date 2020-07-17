@@ -1,0 +1,38 @@
+<br><br>
+<div style="margin-left: 40%;">
+    Search health record of:
+    <input type="text" (keyup)=id($event)><br><br><br>
+    <button class="btn" (click)="getbyid()">Search</button>
+    <button id="all" type="submit" style="margin-left: 30px;" class="btn btn-primary" (click)="getall()">All
+        Health records</button>
+    <!--<br><br><br>-->
+    <button id="all" type="submit" style="margin-left: 40px;" class="btn btn-primary" (click)="Cancel()">Cancel</button>
+    <!--<div class="card-columns">-->
+    <br><br>
+    <div class="card-columns">
+        <div class="card" *ngFor="let user of users">
+            <div id="cd" class="card-body">
+
+                <h2>Id:{{user[1]}}</h2>
+                <h2>Age:{{user[2]}}</h2>
+                <h2>Temperature:{{user[3]}}</h2>
+                <h2>Sour throat:{{user[4]}}</h2>
+                <h2>Medical History:{{user[5]}}</h2>
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-columns">
+        <div class="card">
+            <div id="cd" class="card-body">
+
+                <h2>Id:{{u_id}}</h2>
+                <h2>Age:{{u_age}}</h2>
+                <h2>Temperature:{{u_temp}}</h2>
+                <!--<h2>Sour throat:{{u_sour}}</h2>
+                <h2>Medical History:{{u_history}}</h2>-->
+                <br>
+            </div>
+        </div>
+    </div>

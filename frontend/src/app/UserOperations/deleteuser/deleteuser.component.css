@@ -1,0 +1,38 @@
+#field{
+    font-size: large;
+    font-weight: bold;
+}
+
+table{
+    width: 100%;
+}
+.button {
+  background-color: hsl(0, 0%, 0%);
+ /* Green */
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button4 {border-radius: 15px;}
+
+.div {
+  height: 25px;
+  width: 300px;
+  margin-left:40%
+
+}
+.div1 {
+
+  margin-left:20px
+
+}
+.div2 {
+
+  margin-left:46%
+}

@@ -1,0 +1,27 @@
+<!-- <p>delete works!</p> -->
+<br>
+<h2 style="font-size: 35px;margin-left: 47%;">Delete</h2><br><br><br>
+
+<form id="deluser" name="deluser" #deleteuser="ngForm" (ngSubmit) = delete()>
+    <table>
+        <tr>
+
+            <td>
+                <input class="div" type="text" name="id" id="id" placeholder="id" (keyup)=id($event)>
+            </td>
+        </tr>
+        <br><br><br>
+        <tr>
+
+                <button class="button button4 div2" type="submit">Delete</button>
+
+
+                <button class="button button4 div1" type="reset">Reset</button>
+
+        </tr>
+    </table>
+</form>
+
+<br><br>
+
+<h3 *ngIf="isdel">{{Confirmation}}</h3>

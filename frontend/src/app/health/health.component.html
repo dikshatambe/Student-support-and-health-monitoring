@@ -1,0 +1,63 @@
+<br>
+<mat-label style="font-size:25px;margin-left: 45%;">Health Assessment</mat-label>
+
+<form class="example-form" [formGroup]="registerForm">
+
+    <mat-form-field class="example-full-width" appearance="outline">
+
+        <mat-label>Id</mat-label>
+        <input matInput name="id" formControlName="id" maxlength="4" type=number required>
+
+
+        <mat-error *ngIf="id.hasError('required')">
+            <strong>Id is required</strong>
+
+        </mat-error>
+
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Age</mat-label>
+        <input matInput name="age" placeholder="age" formControlName="age" maxlength="100" type=number required>
+
+        <mat-error *ngIf="age.hasError('required')">
+            <strong>Age is required</strong>
+        </mat-error>
+    </mat-form-field>
+
+
+    <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Body Temperature</mat-label>
+        <input matInput name="temp" placeholder="temp" formControlName="temp" maxlength="3" type=number required>
+
+        <mat-error *ngIf="temp.hasError('required')">
+            <strong>Temperature is required</strong>
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Medical History</mat-label>
+        <input name="medical_history" type="medical_history" matInput placeholder="medical_history"
+            formControlName="medical_history" maxlength="200" required>
+        <mat-error *ngIf="medical_history.hasError('required')">
+            <strong>medical_history is required</strong>
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>sour throat</mat-label>
+        <input matInput matInput name="sour_throat" placeholder="sour_throat"  formControlName="sour_throat"
+            maxlength="10" required>
+
+        <mat-error *ngIf="sour_throat.hasError('required')">
+            <strong>status is required</strong>
+        </mat-error>
+    </mat-form-field>
+
+    <br>
+
+
+    <button style="margin-left: 46%;" class="btn" name="save" mat-raised-button [disabled]="!registerForm.valid"
+        (click)="onSubmit()">Submit</button>
+    <button routerLink="/login" style="margin-left: 30px;" class="btn" mat-raised-button
+        (click)="cancel()">Cancel</button>
+</form>

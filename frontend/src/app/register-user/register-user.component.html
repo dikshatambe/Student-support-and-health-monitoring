@@ -1,0 +1,112 @@
+<br>
+<mat-label style="font-size:25px;margin-left: 45%;">Register</mat-label>
+
+<form class="example-form" [formGroup]="registerForm">
+
+  <!--<mat-form-field class="example-full-width" appearance="outline">
+
+    <mat-label>Id</mat-label>
+    <input matInput name="id" formControlName="id" maxlength="100" required>
+
+
+    <mat-error *ngIf="id.hasError('required')">
+      <strong>ID is required</strong>
+
+    </mat-error>
+
+  </mat-form-field>-->
+
+  <mat-form-field class="example-full-width" appearance="outline">
+
+    <mat-label>First Name</mat-label>
+    <input matInput name="first_name" formControlName="firstname" maxlength="100" required>
+
+
+    <mat-error *ngIf="firstname.hasError('required')">
+      <strong>Firstname is required</strong>
+
+    </mat-error>
+
+  </mat-form-field>
+
+
+  <mat-form-field class="example-full-width" appearance="outline">
+    <mat-label>Last Name</mat-label>
+    <input matInput name="last_name" placeholder="Lastname" formControlName="lastname" maxlength="100" required>
+
+    <mat-error *ngIf="lastname.hasError('required')">
+      <strong>Lastname is required</strong>
+    </mat-error>
+  </mat-form-field>
+
+
+  <mat-form-field class="example-full-width" appearance="outline">
+    <mat-label>Batch Name</mat-label>
+    <input matInput name="batch" placeholder="batch" formControlName="batch" maxlength="4" required>
+
+    <mat-error *ngIf="batch.hasError('required')">
+      <strong>Batchname is required</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="outline">
+    <mat-label>Email</mat-label>
+    <input name="email" type="email" matInput placeholder="Email" formControlName="email" maxlength="100" required>
+    <mat-error *ngIf="email.hasError('required')">
+      <strong>Email is required</strong>
+    </mat-error>
+    <mat-error *ngIf="email.hasError('email') && !email.hasError('required')">
+      Please enter a valid email address
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="outline">
+    <mat-label>Contact Number</mat-label>
+    <input matInput matInput name="contact_number" placeholder="Contact Number" formControlName="contactNumber"
+      maxlength="10" required>
+
+    <mat-error *ngIf="contactNumber.hasError('required')">
+      <strong>Contact Number is required</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="outline">
+    <mat-label>Address</mat-label>
+    <input matInput name="address" placeholder="address" formControlName="address" maxlength="50" required>
+
+    <mat-error *ngIf="batch.hasError('required')">
+      <strong>Adress is required</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="outline">
+    <mat-label>Password</mat-label>
+    <input maxlength="20" minlength="6" name="password" type="password" matInput placeholder="Password"
+      formControlName="password" required>
+    <mat-error *ngIf="password.hasError('required')">
+      <strong>Password is required</strong>
+    </mat-error>
+    <mat-error *ngIf="password.hasError('minlength')">
+      <strong>Required length is at least 6 characters</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="outline">
+    <mat-label>Password</mat-label>
+    <input maxlength="20" minlength="6" name="password" type="password" matInput placeholder="confirmPassword"
+      formControlName="confirmPassword" required>
+    <mat-error *ngIf="confirmPassword.hasError('required')">
+      <strong>Password is required</strong>
+    </mat-error>
+    <mat-error *ngIf="confirmPassword.hasError('mustMatch')">
+      Passwords must match
+    </mat-error>
+  </mat-form-field>
+  <br>
+
+
+  <button style="margin-left: 46%;" class="btn" name="save" mat-raised-button [disabled]="!registerForm.valid"
+    (click)="onSubmit()">Register</button>
+  <button routerLink="/login" style="margin-left: 30px;" class="btn" mat-raised-button
+    (click)="cancel()">Cancel</button>
+</form>

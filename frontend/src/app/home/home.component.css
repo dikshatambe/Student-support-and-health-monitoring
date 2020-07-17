@@ -1,0 +1,35 @@
+
+
+.home-full-width {
+  margin-top: 150px;
+  margin-left: 660px;
+    width: 20%;
+}
+
+.home-full-width2 {
+  margin-top: 5px;
+  margin-left: 660px;
+    width: 20%;
+}
+
+table {
+    width: 100%;
+  }
+
+
+.image{
+	background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg");
+ 
+  height: 100%;
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  text-align: center;
+    
+  font-family: verdana;
+  font-size: 150%;
+}

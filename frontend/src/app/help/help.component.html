@@ -1,0 +1,39 @@
+<br><br>
+<div style="margin-left: 40%;">
+    Search queries of:
+    <input type="text" (keyup)=id($event)><br><br><br>
+    <button class="btn" (click)="getbyid()">Search</button>
+    <button id="all" type="submit" style="margin-left: 30px;" class="btn btn-primary" (click)="getall()">All
+        Queries</button>
+    <!--<br><br><br>-->
+    <button id="all" type="submit" style="margin-left: 40px;" class="btn btn-primary" (click)="Cancel()">Cancel</button>
+    <br><br>
+    <div class="card-columns">
+        <div class="card" *ngFor="let user of users">
+            <div id="cd" class="card-body">
+
+                <h2>Id:{{user[1]}}</h2>
+                <h2>Queries:{{user[2]}}</h2>
+                <br>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="card-columns">
+        <div class="card">
+            <div id="cd" class="card-body">
+
+                <h2>Id:{{u_id}}</h2>
+                <h2>Queries:{{u_query}}</h2>
+
+            </div>
+        </div>
+    </div>
+
+    <!--<table mat-table>
+        <ng-container matColumnDef="user">
+            <th mat-header-cell *matHeaderCellDef> Details </th>
+            <td mat-cell *matCellDef="let user"> {{u_query}} </td>
+        </ng-container>
+    </table>-->

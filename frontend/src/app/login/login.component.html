@@ -1,0 +1,24 @@
+<div class="row" id="log">
+  <div class="col-sm-4 text-center abc">
+    <!-- Default form login -->
+    <form id="loginuser" name="loginuser" #createuser="ngForm" (ngSubmit)=validation(createuser.value)>
+
+      <p class="h4 mb-4 text-left mleft"> Login </p><br><br><br>
+
+      <!-- Email -->
+      <p>
+        <input type="email" id="id" name="id" class="form-control mb-4" placeholder="Enter RollNo" ngModel>
+        <!-- Password -->
+      </p><br>
+
+      <p>
+        <input type="password" id="password" name="password" class="form-control mb-4" placeholder="Enter Password"
+          ngModel>
+        <!-- Sign in button -->
+      </p><br>
+      <button class="btn btn-info btn-block " type="submit">LOGIN</button>
+
+    </form>
+  </div>
+
+</div>
