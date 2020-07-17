@@ -1,0 +1,22 @@
+http://localhost:9090/webapi/v1/login      just post method({"user_id": 1, "password": "password5"})
+
+http://localhost:9090/webapi/v1/user
+http://localhost:9090/webapi/v1/files
+http://localhost:9090/webapi/v1/group
+http://localhost:9090/webapi/v1/usergroup
+
+
+
+
+GetAll      : http://localhost:9090/webapi/v1/{api_name}
+Post        : http://localhost:9090/webapi/v1/{api_name}
+GetById     : http://localhost:9090/webapi/v1/{api_name}/:id
+PutById     : http://localhost:9090/webapi/v1/{api_name}/:id
+DeleteById  : http://localhost:9090/webapi/v1/{api_name}/:id
+
+e.g 
+GetAll      : http://localhost:9090/webapi/v1/user
+Post        : http://localhost:9090/webapi/v1/user
+GetById     : http://localhost:9090/webapi/v1/user/:id
+PutById     : http://localhost:9090/webapi/v1/user/:id
+DeleteById  : http://localhost:9090/webapi/v1/user/:id
